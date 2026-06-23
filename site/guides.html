@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | راهنمای قابلیت‌ها</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="guides.html" id="nav-guides" class="text-green-400 font-bold transition-colors lang-link">راهنماها</a>
+                    <a href="index.html#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h1 id="main-title" class="text-3xl font-black text-white sm:text-5xl tracking-tight">مرکز آموزش و راهنمای کاربری 📚</h1>
+            <p id="main-desc" class="mt-4 text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                تمام ابزارها و بخش‌های هوشمند بیپ رو مثل کف دستت بشناس و سیستم عصبی و رفلکس‌هات رو به چالش بکش.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="group relative rounded-2xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/30 hover:bg-slate-950/80 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-bold font-en text-green-500 tracking-widest uppercase">Feature #01</span>
+                        <span class="text-xl">🔊</span>
+                    </div>
+                    <h3 id="card1-title" class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">تایمر صوتی رندوم</h3>
+                    <p id="card1-desc" class="mt-2 text-xs text-slate-400 leading-relaxed">
+                        شلیک پالس‌های صوتی در فواصل کاملاً غیرقابل‌پیش‌بینی برای به چالش کشیدن سرعت عکس‌العمل و کالیبره کردن رفلکس‌های حرکتی.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <a href="guides/beep_timer.html" id="card1-btn" class="inline-flex items-center gap-1.5 text-xs font-bold text-green-500 hover:text-green-400 transition-colors lang-link">
+                        مطالعه راهنما <span class="font-en">➔</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/30 hover:bg-slate-950/80 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-bold font-en text-green-500 tracking-widest uppercase">Feature #02</span>
+                        <span class="text-xl">⚡</span>
+                    </div>
+                    <h3 id="card2-title" class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">تایمر تصویری (فلاش)</h3>
+                    <p id="card2-desc" class="mt-2 text-xs text-slate-400 leading-relaxed">
+                        سنجش میلی‌ثانیه‌ای سرعت واکنش دیداری به محض تغییر رنگ صفحه؛ مجهز به سیستم فوق‌العاده دقیق ضدتقلب هوشمند.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <a href="guides/flash_timer.html" id="card2-btn" class="inline-flex items-center gap-1.5 text-xs font-bold text-green-500 hover:text-green-400 transition-colors lang-link">
+                        مطالعه راهنما <span class="font-en">➔</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/30 hover:bg-slate-950/80 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-bold font-en text-green-500 tracking-widest uppercase">Feature #03</span>
+                        <span class="text-xl">📊</span>
+                    </div>
+                    <h3 id="card3-title" class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">ماشین‌حساب فواصل</h3>
+                    <p id="card3-desc" class="mt-2 text-xs text-slate-400 leading-relaxed">
+                        محاسبه، آنالیز و جدول‌بندی فواصل زمانی تمرینات برای برنامه‌ریزی دقیق سشن‌های شتاب‌دهی عصب و عضله.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <a href="guides/calc_timer.html" id="card3-btn" class="inline-flex items-center gap-1.5 text-xs font-bold text-green-500 hover:text-green-400 transition-colors lang-link">
+                        مطالعه راهنما <span class="font-en">➔</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/30 hover:bg-slate-950/80 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-bold font-en text-green-500 tracking-widest uppercase">Feature #04</span>
+                        <span class="text-xl">🧭</span>
+                    </div>
+                    <h3 id="card4-title" class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">تمرینات چابکی و جهت‌یابی</h3>
+                    <p id="card4-desc" class="mt-2 text-xs text-slate-400 leading-relaxed">
+                        فرماندهی ناگهانی جهات فضایی و فرعی برای جابه‌جایی‌های چابک و انفجاری کورتکس حرکتی بدن.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <a href="guides/agility_timer.html" id="card4-btn" class="inline-flex items-center gap-1.5 text-xs font-bold text-green-500 hover:text-green-400 transition-colors lang-link">
+                        مطالعه راهنما <span class="font-en">➔</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative rounded-2xl border border-green-950/30 bg-slate-950/20 p-6 transition-all hover:border-green-500/40 hover:bg-slate-950/70 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-bold font-en text-green-400 tracking-widest uppercase">App Configuration</span>
+                        <span class="text-xl">⚙️</span>
+                    </div>
+                    <h3 id="card-settings-title" class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">تنظیمات و شخصی‌سازی</h3>
+                    <p id="card-settings-desc" class="mt-2 text-xs text-slate-400 leading-relaxed">
+                        راهنمای کامل پیکربندی هسته اپلیکیشن؛ مدیریت تم‌های نئونی، کالیبراسیون افکت‌های صوتی و بایگانی تاریخچه رکوردها.
+                    </p>
+                </div>
+                <div class="mt-6">
+                    <a href="guides/settings_hub.html" id="card-settings-btn" class="inline-flex items-center gap-1.5 text-xs font-bold text-green-400 hover:text-green-300 transition-colors lang-link">
+                        ورود به مرکز تنظیمات <span class="font-en">➔</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | راهنمای قابلیت‌ها', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navDownload: 'دانلود',
+                mainTitle: 'مرکز آموزش و راهنمای کاربری 📚',
+                mainDesc: 'تمام ابزارها و بخش‌های هوشمند بیپ رو مثل کف دستت بشناس و سیستم عصبی و رفلکس‌هات رو به چالش بکش.',
+                card1Title: 'تایمر صوتی رندوم', card1Desc: 'شلیک پالس‌های صوتی در فواصل کاملاً غیرقابل‌پیش‌بینی برای به چالش کشیدن سرعت عکس‌العمل و کالیبره کردن رفلکس‌های حرکتی.', card1Btn: 'مطالعه راهنما ➔',
+                card2Title: 'تایمر تصویری (فلاش)', card2Desc: 'سنجش میلی‌ثانیه‌ای سرعت واکنش دیداری به محض تغییر رنگ صفحه؛ مجهز به سیستم فوق‌العاده دقیق ضدتقلب هوشمند.', card2Btn: 'مطالعه راهنما ➔',
+                card3Title: 'تایمر محاسباتی (تمرکز ذهنی)', card3Desc: 'تولید مسائل ریاضی ناگهانی (جمع، تفریق و...) در طول تمرین؛ با حل سریع معادلات تحت فشار زمان، قدرت تمرکز و پهنای باند ذهنت رو چند برابر کن.', card3Btn: 'مطالعه راهنما ➔',
+                card4Title: 'تمرینات چابکی و جهت‌یابی', card4Desc: 'فرماندهی ناگهانی جهات فضایی و فرعی برای جابه‌جایی‌های چابک و انفجاری کورتکس حرکتی بدن.', card4Btn: 'مطالعه راهنما ➔',
+                cardSettingsTitle: 'تنظیمات و شخصی‌سازی', cardSettingsDesc: 'راهنمای کامل پیکربندی هسته اپلیکیشن؛ مدیریت تم‌های نئونی، کالیبراسیون افکت‌های صوتی و بایگانی تاریخچه رکوردها.', cardSettingsBtn: 'ورود به مرکز تنظیمات ➔',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Feature Guides', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navDownload: 'Download',
+                mainTitle: 'Documentation & Feature Hub 📚',
+                mainDesc: 'Master every subsystem within Beep. Fully optimize your cognitive latency and training protocols.',
+                card1Title: 'Randomized Audio Beep', card1Desc: 'Acoustic impulse triggers dispatched at unstable random cycles to shatter anticipatory conditioning and forge reflex speed.', card1Btn: 'Read Guide ➔',
+                card2Title: 'Visual Flash Timer', card2Desc: 'Millisecond resolution tracking mapped to absolute screen color shifts. Armed with strict anti-predictive cheat control blocks.', card2Btn: 'Read Guide ➔',
+		card3Title: 'Cognitive Math Timer', card3Desc: 'Spits out rapid arithmetic equations (addition, subtraction, etc.) during active drills. Solve equations under tight time limits to maximize cognitive focus.', card3Btn: 'Read Guide ➔',
+		card4Title: 'Agility & Spatial Commands', card4Desc: 'Dynamic directional command sequences instructing rapid physical vector changes for intense neuromuscular drills.', card4Btn: 'Read Guide ➔',
+                cardSettingsTitle: 'Settings & Customization', cardSettingsDesc: 'Comprehensive guide to application configurations, framework theme switching, sound bite loading, and historical ledger management.', cardSettingsBtn: 'Open Settings Hub ➔',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            
+            document.getElementById('main-title').innerText = data.mainTitle;
+            document.getElementById('main-desc').innerText = data.mainDesc;
+            
+            document.getElementById('card1-title').innerText = data.card1Title;
+            document.getElementById('card1-desc').innerText = data.card1Desc;
+            document.getElementById('card1-btn').innerHTML = data.card1Btn;
+            
+            document.getElementById('card2-title').innerText = data.card2Title;
+            document.getElementById('card2-desc').innerText = data.card2Desc;
+            document.getElementById('card2-btn').innerHTML = data.card2Btn;
+            
+            document.getElementById('card3-title').innerText = data.card3Title;
+            document.getElementById('card3-desc').innerText = data.card3Desc;
+            document.getElementById('card3-btn').innerHTML = data.card3Btn;
+            
+            document.getElementById('card4-title').innerText = data.card4Title;
+            document.getElementById('card4-desc').innerText = data.card4Desc;
+            document.getElementById('card4-btn').innerHTML = data.card4Btn;
+            
+            document.getElementById('card-settings-title').innerText = data.cardSettingsTitle;
+            document.getElementById('card-settings-desc').innerText = data.cardSettingsDesc;
+            document.getElementById('card-settings-btn').innerHTML = data.cardSettingsBtn;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === 'index.html') {
+                    link.href = `index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === 'guides.html') {
+                    link.href = `guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>

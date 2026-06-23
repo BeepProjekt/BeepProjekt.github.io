@@ -1,0 +1,31 @@
+name: Deploy Tactical Site & APKs to User GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Deploy Directory
+        run: |
+          mkdir -p _public
+          # کپی کردن تمام فایل‌های داخل پوشه سایت به پوشه نهایی
+          cp -r site/* _public/
+          # کپی کردن خود پوشه apks به پوشه نهایی
+          cp -r apks _public/
+
+      - name: Deploy to gh-pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_public
+          publish_branch: gh-pages

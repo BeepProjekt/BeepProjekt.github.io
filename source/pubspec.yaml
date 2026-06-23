@@ -1,0 +1,46 @@
+name: myapp
+description: "Beep Beep!!"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 2.0.0+35
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  change_app_package_name: ^1.5.0
+  google_fonts: ^6.3.3
+  shared_preferences: ^2.5.4
+  provider: ^6.1.5+1
+  audioplayers: ^6.5.1
+  intl: ^0.20.2
+  math_expressions: ^3.1.0
+  dynamic_color: ^1.8.1
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon.jpg"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon.jpg
+    - assets/clang.mp3
+    - assets/classic.mp3
+    - assets/commando.mp3
+    - assets/sharp.mp3
+    - assets/sonar.mp3

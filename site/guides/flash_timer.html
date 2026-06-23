@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | تایمر تصویری</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="../index.html#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">Feature Guide #02</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">تایمر تصویری (تغییر رنگ) ⚡️</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                سنجش و ارتقای سرعت واکنش دیداری با مکانیزم فوق‌سریع کالیبراسیون بر حسب میلی‌ثانیه؛ چشمهات رو به یک رادار شکار محرک‌های ناگهانی تبدیل کن!
+            </p>
+        </div>
+
+        <div class="space-y-24">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_154313.jpeg" alt="Flash Timer Setup" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">01</span>
+                        <h2 id="step1-title" class="text-xl font-bold text-white">تنظیم بازه تصادفی فلاش نور (Interval Setup)</h2>
+                    </div>
+                    <p id="step1-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        تمرینات چشمی ردیابی و واکنش، زمانی اثربخش هستند که هیچ ایده یا حدسی درباره زمان وقوع محرک نداشته باشی. در اولین قدم، با اسلایدر نئونی اختصاصی، پنجره تاخیر سیستم را به صورت رندوم (مثلاً ۱ تا ۶۰ ثانیه) پیاده‌سازی می‌کنی. سیستم پس از شروع، یک ثانیه کاملاً شانسی از درون این بازه بیرون می‌کشد تا شانس هرگونه حدس‌زدن یا پیش‌بینیِ ریتمیک از سیستم عصبی تو سلب بشه.
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <ul class="space-y-2 text-xs text-slate-400">
+                            <li><strong id="step1-li1-bold" class="text-slate-200">محدوده گسترده (1 - 60s):</strong> دستت برای به چالش کشیدنِ صبر، تمرکز بلندمدت و استقامت ذهنی کاملاً بازه.</li>
+                            <li><strong id="step1-li2-bold" class="text-slate-200">استارت نئونی:</strong> فشردن کلید START سیستم را وارد فاز پردازش پنهان زمان‌بندی می‌کند.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16 lg:flex-row-reverse">
+                <div class="lg:col-span-5 flex justify-center lg:order-last">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_154545.jpeg" alt="Suspense Mode" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">02</span>
+                        <h2 id="step2-title" class="text-xl font-bold text-white">فاز تعلیق؛ انتظار فعال برای انفجار رنگ (Wait)</h2>
+                    </div>
+                    <p id="step2-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        بلافاصله پس از استارت، صفحه نمایش کاملاً تاریک شده و پیام <span class="text-white font-bold font-en">"Wait for the color change..."</span> ظاهر می‌شه. این بخش، فاز تعلیق هست؛ جایی که کورتکس مغز تو در بالاترین سطح آمادگی قرار داره. ثانیه‌ها به صورت پنهانی می‌گذرند و تو باید بدون پلک‌زدن، آماده باشی تا به محض تغییر پس‌زمینه، روی صفحه بکوبی!
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <blockquote id="step2-note" class="text-xs text-green-500/90 italic leading-relaxed">
+                            💡 نکته علمی: این فاز دقیقاً سیستم عصبی سمپاتیک رو برای پاسخ‌های انفجاری و ناگهانی کالیبره می‌کنه و به افزایش پایداری توجه (Attention Span) کمک شایانی می‌کنه.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_154432.jpeg" alt="Color Trigger State" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">03</span>
+                        <h2 id="step3-title" class="text-xl font-bold text-white">شلیک سیگنال دیداری؛ لحظه تغییر رنگ آنی</h2>
+                    </div>
+                    <p id="step3-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        بوم! زمان پنهانیِ الگوریتم تمام میشه و کل صفحه نمایش یکپارچه به رنگ نئونی تم انتخابی تو (در اینجا سبز روشن) درمیاد. این دقیقاً همان «محرک دیداری نهایی» است. به محض دیدن این فلاش رنگی، باید سریع‌ترین لمس یا کلیک زندگی‌ات رو ثبت کنی. موتور کرونومتر داخلی اپلیکیشن با دقت فوق‌بالا از همین میکروسکانس شروع به محاسبه زمان می‌کند.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16 lg:flex-row-reverse">
+                <div class="lg:col-span-5 flex justify-center lg:order-last">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_154505.jpeg" alt="Reaction Result" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">04</span>
+                        <h2 id="step4-title" class="text-xl font-bold text-white">محاسبه دقیق رکورد بر حسب میلی‌ثانیه</h2>
+                    </div>
+                    <p id="step4-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        به محض اینکه روی صفحه ضربه می‌زنی، زمان متوقف شده و سرعت واکنش دقیق تو مثل یک مدال افتخار روی صفحه نقش می‌بنده (مثلاً <span class="text-green-400 font-bold font-en">508 ms</span>). هدف تو در تمرینات مکرر اینه که این عدد رو به زیر ۲۵۰ یا حتی ۲۰۰ میلی‌ثانیه برسونی تا به چابکیِ یک گیمر سطح بالا یا ورزشکار حرفه‌ای برسی. دکمه Try Again بلافاصله زمین بازی رو برای راند بعدی آماده می‌کنه.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-12">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_154623.jpeg" alt="Cheat Protection Triggered" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-red-500/10 text-xs font-bold text-red-400 font-en">05</span>
+                        <h2 id="step5-title" class="text-xl font-bold text-red-400">سیستم ضدتقلب هوشمند (Anti-Cheat Mechanism)</h2>
+                    </div>
+                    <p id="step5-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        می‌خواهی شانس خودت رو امتحان کنی و قبل از تغییر رنگ، به صورت شانسی صفحه رو لمس کنی تا رکورد بهتری ثبت کنی؟ مچت گرفته شد! موتور هوشمند بیپ به شدت روی این موضوع حساسه. اگه قبل از شلیک فلاش نئونی روی صفحه کلیک کنی، بلافاصله جریمه میشی؛ کل صفحه قرمز شده و با پیام خطای <span class="text-red-500 font-bold font-en">"TOO EARLY! - RESETTING"</span> مواجه میشی و سشن جاری به طور کامل ریست میشه تا ارزش رکوردهات حفظ بشه.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | تایمر تصویری', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navDownload: 'دانلود',
+                pageTitle: 'تایمر تصویری (تغییر رنگ) ⚡️',
+                pageDesc: 'سنجش و ارتقای سرعت واکنش دیداری با مکانیزم فوق‌سریع کالیبراسیون بر حسب میلی‌ثانیه؛ چشمهات رو به یک رادار شکار محرک‌های ناگهانی تبدیل کن!',
+                step1Title: 'تنظیم بازه تصادفی فلاش نور (Interval Setup)',
+                step1Desc: 'تمرینات چشمی ردیابی و واکنش، زمانی اثربخش هستند که هیچ ایده یا حدسی درباره زمان وقوع محرک نداشته باشی. در اولین قدم، با اسلایدر نئونی اختصاصی، پنجره تاخیر سیستم را به صورت رندوم (مثلاً ۱ تا ۶۰ ثانیه) پیاده‌سازی می‌کنی. سیستم پس از شروع، یک ثانیه کاملاً شانسی از درون این بازه بیرون می‌کشد تا شانس هرگونه حدس‌زدن یا پیش‌بینیِ ریتمیک از سیستم عصبی تو سلب بشه.',
+                step1Li1Bold: 'محدوده گسترده (1 - 60s):', step1Li1Text: ' دستت برای به چالش کشیدنِ صبر، تمرکز بلندمدت و استقامت ذهنی کاملاً بازه.',
+                step1Li2Bold: 'استارت نئونی:', step1Li2Text: ' فشردن کلید START سیستم را وارد فاز پردازش پنهان زمان‌بندی می‌کند.',
+                step2Title: 'فاز تعلیق؛ انتظار فعال برای انفجار رنگ (Wait)',
+                step2Desc: 'بلافاصله پس از استارت، صفحه نمایش وارد فاز انتظار پیش‌فرض شده و پیام "Wait for the color change..." ظاهر می‌شه. این بخش، فاز تعلیق هست؛ جایی که کورتکس مغز تو در بالاترین سطح آمادگی قرار داره. بسته به تم انتخابی شما (تاریک یا روشن)، صفحه در حالت آماده‌باش قرار می‌گیره و تو باید بدون پلک‌زدن، آماده باشی تا به محض تغییر پس‌زمینه، روی صفحه بکوبی!',
+		step2Note: '💡 نکته علمی: این فاز دقیقاً سیستم عصبی سمپاتیک رو برای پاسخ‌های انفجاری و ناگهانی کالیبره می‌کنه و به افزایش پایداری توجه (Attention Span) کمک شایانی می‌کنه.',
+                step3Title: 'شلیک سیگنال دیداری؛ لحظه تغییر رنگ آنی',
+                step3Desc: 'بوم! زمان پنهانیِ الگوریتم تمام میشه و کل صفحه نمایش یکپارچه تغییر رنگ میده و به رنگِ شاخصِ تم انتخابی تو درمیاد. این تغییر ناگهانیِ رنگ، همان «محرک دیداری نهایی» است. به محض دیدن این فلاش رنگی، باید سریع‌ترین لمس یا کلیک زندگی‌ات رو ثبت کنی. موتور کرونومتر داخلی اپلیکیشن با دقت فوق‌بالا از همین میکروسکانس شروع به محاسبه زمان می‌کند.',
+		step4Title: 'محاسبه دقیق رکورد بر حسب میلی‌ثانیه',
+                step4Desc: 'به محض اینکه روی صفحه ضربه می‌زنی، زمان متوقف شده و سرعت واکنش دقیق تو مثل یک مدال افتخار روی صفحه نقش می‌بنده (مثلاً 508 ms). هدف تو در تمرینات مکرر اینه که این عدد رو به زیر ۲۵۰ یا حتی ۲۰۰ میلی‌ثانیه برسونی تا به چابکیِ یک گیمر سطح بالا یا ورزشکار حرفه‌ای برسی. دکمه Try Again بلافاصله زمین بازی رو برای راند بعدی آماده می‌کنه.',
+                step5Title: 'سیستم ضدتقلب هوشمند (Anti-Cheat Mechanism)',
+                step5Desc: 'می‌خواهی شانس خودت رو امتحان کنی و قبل از تغییر رنگ، به صورت شانسی صفحه رو لمس کنی تا رکورد بهتری ثبت کنی؟ مچت گرفته شد! موتور هوشمند بیپ به شدت روی این موضوع حساسه. اگه قبل از شلیک فلاش نئونی روی صفحه کلیک کنی، بلافاصله جریمه میشی؛ کل صفحه قرمز شده و با پیام خطای "TOO EARLY! - RESETTING" مواجه میشی و سشن جاری به طور کامل ریست میشه تا ارزش رکوردهات حفظ بشه.',
+               	footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Visual Flash Timer', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navDownload: 'Download',
+                pageTitle: 'Visual Flash Timer (Color Change) ⚡️',
+                pageDesc: 'Measure and smash your optical reaction limits via hyper-accurate millisecond stopwatch tracking. Turn your eyes into a heat-seeking reflex machine!',
+                step1Title: 'Randomized Chromatic Delays (Interval Setup)',
+                step1Desc: 'Visual reflex conditioning only excels when you completely lack any anticipatory data on when the trigger hits. In step one, utilize the dedicated neon layout slider to specify your window bounds (e.g., 1 to 60 seconds). Once fired, the engine extracts a random mathematical latency within this threshold, preventing the central nervous system from building any predictive macro-rhythms.',
+                step1Li1Bold: 'Massive Spectrum (1 - 60s):', step1Li1Text: ' Gives you full tactical options to benchmark focus stamina and neurological endurance over long arcs.',
+                step1Li2Bold: 'Neon Fire Button:', step1Li2Text: ' Pressing START enters the client into a hidden background state processing the randomized ticks.',
+                step2Title: 'Suspense Lifecycle: Vigilant Chroma Hold (Wait)',
+                step2Desc: 'Instantly following execution, the view enters its default standby state based on your active theme (Dark or Light layout) throwing a clear "Wait for the color change..." string. This is the structural suspense block where your motor cortex hooks at maximum firing efficiency, waiting for the visual breakthrough.',
+		step2Note: '💡 Bio-Feedback Note: This custom state isolates the sympathetic nervous system for rapid motor responses, dramatically maximizing active cognitive attention spans over time.',
+                step3Title: 'Visual Signal Emission: Pure Full-Frame Flash',
+                step3Desc: 'Boom! The hidden time vector ends and the entire terminal view undergoes a full-frame color transformation, switching instantly to your selected theme\'s signature accent color. This sudden chromatic shift serves as your absolute visual trigger. Upon seeing this emission flare, execute your rapid tap response.',
+		step4Title: 'Millisecond Telemetry Resolution Metrics',
+                step4Desc: 'The microsecond you contact the screen pane, the clock halts and your true reflex delay lands center-stage as a metric badge of honor (e.g., 508 ms). Your core objective over recurring cycles is to drive this digit down sub 250ms or 200ms to mimic elite tier-1 athletic reflex profiles. Clicking Try Again immediately recycles layout registers for the next round.',
+                step5Title: 'Tactical Anti-Cheat & Prediction Safeguard',
+                step5Desc: 'Trying to game the metric loop by pre-tapping the interface hoping for a lucky milestone score? Caught red-handed! The Beep clock pipeline strictly logs early input interrupts. Striking the viewport before the neon flare pop drops an instantaneous penalty state—painting the screen deep red and blowing a critical "TOO EARLY! - RESETTING" error, purging your volatile session values.',
+		footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            
+            document.getElementById('step1-title').innerText = data.step1Title;
+            document.getElementById('step1-desc').innerText = data.step1Desc;
+            document.getElementById('step1-li1-bold').innerText = data.step1Li1Bold;
+            document.getElementById('step1-li1-bold').nextSibling.textContent = data.step1Li1Text;
+            document.getElementById('step1-li2-bold').innerText = data.step1Li2Bold;
+            document.getElementById('step1-li2-bold').nextSibling.textContent = data.step1Li2Text;
+            
+            document.getElementById('step2-title').innerText = data.step2Title;
+            document.getElementById('step2-desc').innerHTML = data.step2Desc;
+            document.getElementById('step2-note').innerText = data.step2Note;
+            
+            document.getElementById('step3-title').innerText = data.step3Title;
+            document.getElementById('step3-desc').innerText = data.step3Desc;
+            
+            document.getElementById('step4-title').innerText = data.step4Title;
+            document.getElementById('step4-desc').innerHTML = data.step4Drop || data.step4Desc;
+            
+            document.getElementById('step5-title').innerText = data.step5Title;
+            document.getElementById('step5-desc').innerHTML = data.step5Desc;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | صفحه اصلی</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .carousel-item.active { opacity: 1; position: relative; }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#screenshots" id="nav-gallery" class="hover:text-green-500 transition-colors lang-link">محیط برنامه</a>
+                    <a href="guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-right">
+                    <h1 id="hero-title" class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl font-black leading-tight">
+                        وب‌سایت رسمی اپلیکیشن <span class="text-green-500 neon-text">Beep</span>
+                    </h1>
+                    <p id="hero-desc" class="mt-6 text-base text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        دسترسی سریع به آخرین نسخه‌های برنامه، مستندات فنی و راهنمای کامل راه‌اندازی تم‌ها و ویژگی‌های مختلف اپلیکیشن Beep در یک‌جا.
+                    </p>
+                    <div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="#download-zone" id="hero-btn-dl" class="rounded bg-green-500 px-6 py-3 text-sm font-bold text-black shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:bg-green-400 transition-all lang-link">
+                            دانلود مستقیم برنامه ⇩
+                        </a>
+                        <a href="guides.html" id="hero-btn-guide" class="rounded border border-slate-700 bg-slate-900/40 px-6 py-3 text-sm font-bold hover:border-green-500 text-slate-300 hover:text-green-500 transition-all lang-link">
+                            مشاهده مستندات و راهنما 📖
+                        </a>
+                    </div>
+                </div>
+
+                <div id="screenshots" class="lg:col-span-5 flex flex-col items-center justify-center group scroll-mt-24">
+                    <div class="relative w-full max-w-[260px] aspect-[9/18] bg-slate-950 rounded-2xl border-2 border-slate-800 shadow-xl p-1.5 overflow-hidden">
+                        <div id="carousel" class="w-full h-full bg-black rounded-xl overflow-hidden relative">
+                            <div class="carousel-item active"><img src="assets/images/screen_beep.jpeg" alt="Beep" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_flash.jpeg" alt="Flash" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_math.jpeg" alt="Math" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_agility.jpeg" alt="Agility" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_settings.jpeg" alt="Settings" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_themes.jpeg" alt="Themes" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_history.jpeg" alt="History" class="w-full h-full object-contain"></div>
+                            <div class="carousel-item"><img src="assets/images/screen_sounds.jpeg" alt="Sounds" class="w-full h-full object-contain"></div>
+                        </div>
+                        <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-slate-900 border border-slate-800 w-8 h-8 rounded-full text-green-400 font-bold z-30 font-en opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">&lt;</button>
+                        <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-slate-900 border border-slate-800 w-8 h-8 rounded-full text-green-400 font-bold z-30 font-en opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">&gt;</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="download-zone" class="py-16 border-t border-slate-900 bg-[#05080E]">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 id="dl-title" class="text-3xl font-black text-white mb-2">دانلود برنامه ⚡</h2>
+            <p id="dl-desc" class="text-xs text-slate-500 mb-8 font-mono">Project Name: Beep v2.0.0 (Stable)</p>
+            
+            <div class="bg-slate-950 border border-slate-900 rounded-xl p-6 max-w-xl mx-auto shadow-inner">
+                <div class="space-y-3">
+                    <a href="apks/app-arm64-v8a-release.apk" class="flex justify-between items-center p-4 rounded-lg bg-slate-900 hover:bg-green-950/10 border border-slate-800 hover:border-green-500/30 transition-all">
+                        <span class="font-mono font-bold text-white text-sm">Download APK (ARM64-v8a)</span>
+                        <span id="dl-arm64" class="text-[11px] text-slate-500">نسخه ۶۴ بیتی (گوشی‌های جدید)</span>
+                    </a>
+                    <a href="apks/app-armeabi-v7a-release.apk" class="flex justify-between items-center p-4 rounded-lg bg-slate-900 hover:bg-green-950/10 border border-slate-800 hover:border-green-500/30 transition-all">
+                        <span class="font-mono font-bold text-white text-sm">Download APK (armeabi-v7a)</span>
+                        <span id="dl-armv7" class="text-[11px] text-slate-500">نسخه ۳۲ بیتی (گوشی‌های قدیمی‌تر)</span>
+                    </a>
+                    <a href="apks/app-x86_64-release.apk" class="flex justify-between items-center p-4 rounded-lg bg-slate-900 hover:bg-green-950/10 border border-slate-800 hover:border-green-500/30 transition-all">
+                        <span class="font-mono font-bold text-white text-sm">Download APK (x86_64)</span>
+                        <span id="dl-x86" class="text-[11px] text-slate-500">نسخه شبیه‌سازها و پردازنده‌های اینتل</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | صفحه اصلی', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navGallery: 'محیط برنامه', navGuides: 'راهنماها', navDownload: 'دانلود',
+                heroTitle: 'وب‌سایت رسمی اپلیکیشن <span class="text-green-500 neon-text">Beep</span>',
+                heroDesc: 'دسترسی سریع به آخرین نسخه‌های برنامه، مستندات فنی و راهنمای کامل راه‌اندازی تم‌ها و ویژگی‌های مختلف اپلیکیشن Beep در یک‌جا.',
+                heroBtnDl: 'دانلود مستقیم برنامه ⇩', heroBtnGuide: 'مشاهده مستندات و راهنما 📖',
+                dlTitle: 'دانلود برنامه ⚡', dlDesc: 'Project Name: Beep v2.0.0 (Stable)',
+                dlArm64: 'نسخه ۶۴ بیتی (گوشی‌های جدید)', dlArmv7: 'نسخه ۳۲ بیتی (گوشی‌های قدیمی‌تر)', dlX86: 'نسخه شبیه‌سازها و پردازنده‌های اینتل',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Home', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navGallery: 'Gallery', navGuides: 'Guides', navDownload: 'Download',
+                heroTitle: 'Official Site for <span class="text-green-500 neon-text">Beep</span> App',
+                heroDesc: 'Quick access to the latest stable builds, core technical documentation, and full implementation manuals for the Beep simulation ecosystem.',
+                heroBtnDl: 'Direct Download ⇩', heroBtnGuide: 'Read Documentation 📖',
+                dlTitle: 'Download App ⚡', dlDesc: 'Project Name: Beep v2.0.0 (Stable)',
+                dlArm64: '64-bit ARM architecture (Modern devices)', dlArmv7: '32-bit ARM architecture (Legacy devices)', dlX86: 'x86_64 architecture (Emulators & Intel)',
+            	footerText: '© 2026 Just a normal person away from society ❤️'
+	    }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-gallery').innerText = data.navGallery;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            document.getElementById('hero-title').innerHTML = data.heroTitle;
+            document.getElementById('hero-desc').innerText = data.heroDesc;
+            document.getElementById('hero-btn-dl').innerText = data.heroBtnDl;
+            document.getElementById('hero-btn-guide').innerText = data.heroBtnGuide;
+            document.getElementById('dl-title').innerText = data.dlTitle;
+            document.getElementById('dl-desc').innerText = data.dlDesc;
+            document.getElementById('dl-arm64').innerText = data.dlArm64;
+            document.getElementById('dl-armv7').innerText = data.dlArmv7;
+            document.getElementById('dl-x86').innerText = data.dlX86;
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '' || cleanPath === 'index.html') {
+                    link.href = `index.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("carousel-item");
+        function showSlide(index) {
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+            for (let i = 0; i < slides.length; i++) slides[i].classList.remove("active");
+            slides[slideIndex].classList.add("active");
+        }
+        function nextSlide() { slideIndex++; showSlide(slideIndex); }
+        function prevSlide() { slideIndex--; showSlide(slideIndex); }
+        let autoSlider = setInterval(nextSlide, 4000);
+        document.getElementById("screenshots").addEventListener("mouseenter", () => clearInterval(autoSlider));
+        document.getElementById("screenshots").addEventListener("mouseleave", () => autoSlider = setInterval(nextSlide, 4000));
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | هاب تنظیمات</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="../index.html#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">App Settings Hub</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">تنظیمات و شخصی‌سازی اپلیکیشن ⚙️</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                با ورود به بخش تنظیمات، محیط کاربری، افکت‌های صوتی و بایگانی رکوردهات رو کاملاً شخصی‌سازی و مدیریت کن.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16 mb-16">
+            <div class="lg:col-span-5 flex justify-center gap-4">
+                <div class="max-w-[190px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                    <img src="../assets/images/Screenshot_20260622_180539.jpeg" alt="Main Screen Gear" class="rounded-lg w-full">
+                </div>
+                <div class="max-w-[190px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                    <img src="../assets/images/Screenshot_20260622_180559.jpeg" alt="Settings View" class="rounded-lg w-full">
+                </div>
+            </div>
+            <div class="lg:col-span-7">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">INFO</span>
+                    <h2 id="enter-title" class="text-xl font-bold text-white">چطور وارد تنظیمات شویم؟</h2>
+                </div>
+                <p id="enter-desc" class="text-slate-400 text-sm leading-relaxed">
+                    در هر کدام از ۴ صفحه اصلی برنامه که هستی، کافیه به گوشه بالا سمت راست نگاه کنی (مطابق فایل Screenshot_20260622_180539.jpeg). با لمس آیکون سفید <span class="text-white font-bold">چرخ‌دنده ⚙️</span>، بلافاصله وارد منوی اصلی تنظیمات بیپ میشی (مطابق فایل Screenshot_20260622_180559.jpeg) که شامل ۳ منوی تفکیک‌شده و کاربردیه. برای جزئیات هر بخش، راهنماهای زیر رو مطالعه کن.
+                </p>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <h2 id="subsections-title" class="text-lg font-black text-white mb-6 flex items-center gap-2">
+                <span class="text-green-500">■</span> زیرمجموعه‌های منوی تنظیمات:
+            </h2>
+
+            <div class="group relative rounded-xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/20 hover:bg-slate-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="text-2xl mt-1">🎨</div>
+                    <div>
+                        <h3 id="theme-title" class="text-base font-bold text-white group-hover:text-green-400 transition-colors">۱. ظاهر و تم‌های برنامه (Appearance & Themes)</h3>
+                        <p id="theme-desc" class="mt-1 text-xs text-slate-400 leading-relaxed">
+                            تغییر و سوئیچ بین حالت‌های مختلف بصری نئونی، دارک مود عمیق و لایت مود برای هماهنگی با نور محیط تمرین شما.
+                        </p>
+                    </div>
+                </div>
+                <a href="settings_themes.html" id="theme-btn" class="shrink-0 inline-flex items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 px-4 py-2 text-xs font-bold text-green-400 hover:border-green-500 hover:bg-slate-900 transition-all lang-link">
+                    راهنمای تم‌ها <span class="font-en mx-1">➔</span>
+                </a>
+            </div>
+
+            <div class="group relative rounded-xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/20 hover:bg-slate-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="text-2xl mt-1">🕒</div>
+                    <div>
+                        <h3 id="history-title" class="text-base font-bold text-white group-hover:text-green-400 transition-colors">۲. تاریخچه و بایگانی رکوردها (View History)</h3>
+                        <p id="history-desc" class="mt-1 text-xs text-slate-400 leading-relaxed">
+                            مشاهده لیست زمان‌بندی‌ها، رکوردهای ثبت‌شده، تعداد پالس‌ها و مدیریت دیتابیس رکوردهای قبلی.
+                        </p>
+                    </div>
+                </div>
+                <a href="settings_history.html" id="history-btn" class="shrink-0 inline-flex items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 px-4 py-2 text-xs font-bold text-green-400 hover:border-green-500 hover:bg-slate-900 transition-all lang-link">
+                    راهنمای تاریخچه <span class="font-en mx-1">➔</span>
+                </a>
+            </div>
+
+            <div class="group relative rounded-xl border border-slate-900 bg-slate-950/40 p-6 transition-all hover:border-green-500/20 hover:bg-slate-950 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="text-2xl mt-1">🔊</div>
+                    <div>
+                        <h3 id="sound-title" class="text-base font-bold text-white group-hover:text-green-400 transition-colors">۳. صداهای برنامه (App Sounds)</h3>
+                        <p id="sound-desc" class="mt-1 text-xs text-slate-400 leading-relaxed">
+                            انتخاب نوع بوق هشدار، تغییر فرکانس‌های صوتی و فعال‌سازی گوینده‌های صوتی برای جهت‌ها و فرامین حرکتی.
+                        </p>
+                    </div>
+                </div>
+                <a href="settings_sounds.html" id="sound-btn" class="shrink-0 inline-flex items-center justify-center rounded-lg border border-slate-800 bg-slate-900/60 px-4 py-2 text-xs font-bold text-green-400 hover:border-green-500 hover:bg-slate-900 transition-all lang-link">
+                    راهنمای صداها <span class="font-en mx-1">➔</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | هاب تنظیمات', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navDownload: 'دانلود',
+                pageTitle: 'تنظیمات و شخصی‌سازی اپلیکیشن ⚙️',
+                pageDesc: 'با ورود به بخش تنظیمات، محیط کاربری، افکت‌های صوتی و بایگانی رکوردهات رو کاملاً شخصی‌سازی و مدیریت کن.',
+                enterTitle: 'چطور وارد تنظیمات شویم؟',
+                enterDesc: 'در هر کدام از ۴ صفحه اصلی برنامه که هستی، کافیه به گوشه بالا سمت راست نگاه کنی. با لمس آیکون سفید چرخ‌دنده ⚙️، بلافاصله وارد منوی اصلی تنظیمات بیپ میشی که شامل ۳ منوی تفکیک‌شده و کاربردیه. برای جزئیات هر بخش، راهنماهای زیر رو مطالعه کن.',
+                subsectionsTitle: '■ زیرمجموعه‌های منوی تنظیمات:',
+                themeTitle: '۱. ظاهر و تم‌های برنامه (Appearance & Themes)',
+                themeDesc: 'تغییر و سوئیچ بین حالت‌های مختلف بصری نئونی، دارک مود عمیق و لایت مود برای هماهنگی با نور محیط تمرین شما.',
+                themeBtn: 'راهنمای تم‌ها ➔',
+                historyTitle: '۲. تاریخچه و بایگانی رکوردها (View History)',
+                historyDesc: 'مشاهده لیست زمان‌بندی‌ها، رکوردهای ثبت‌شده، تعداد پالس‌ها و مدیریت دیتابیس رکوردهای قبلی.',
+                historyBtn: 'راهنمای تاریخچه ➔',
+                soundTitle: '۳. صداهای برنامه (App Sounds)',
+                soundDesc: 'انتخاب نوع بوق هشدار، تغییر فرکانس‌های صوتی و فعال‌سازی گوینده‌های صوتی برای جهت‌ها و فرامین حرکتی.',
+                soundBtn: 'راهنمای صداها ➔',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Settings Hub', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navDownload: 'Download',
+                pageTitle: 'App Settings & Customization ⚙️',
+                pageDesc: 'Take full control of your runtime ecosystem. Tweak user interfaces, calibrate audio outputs, and manage session log archives.',
+                enterTitle: 'Accessing the Configuration Suite',
+                enterDesc: 'From any of the 4 core workout viewports, focus on the top-right alignment cluster. Tap the crisp white gear glyph ⚙️ to slide out the master system configuration hub. Review the modular structures below for targeted setups.',
+                subsectionsTitle: '■ Settings Architecture Menus:',
+                themeTitle: '1. Framework Interface Themes (Appearance & Themes)',
+                themeDesc: 'Cycle through alternative UI color palettes, absolute dark arrays, and contrast profiles to suit ambient lighting constraints.',
+                themeBtn: 'Themes Guide ➔',
+                historyTitle: '2. Ledger Logs & Run Histories (View History)',
+                historyDesc: 'Inspect comprehensive chronologies, sequence lengths, reaction timestamps, and handle storage sanitation filters.',
+                historyBtn: 'History Guide ➔',
+                soundTitle: '3. Acoustic Configuration Profiles (App Sounds)',
+                soundDesc: 'Adjust baseline oscillator signals, override alert tones, and activate speech synthesis arrays for directional commands.',
+                soundBtn: 'Sounds Guide ➔',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            document.getElementById('enter-title').innerText = data.enterTitle;
+            document.getElementById('enter-desc').innerHTML = data.enterDesc;
+            document.getElementById('subsections-title').innerText = data.subsectionsTitle;
+            
+            document.getElementById('theme-title').innerText = data.themeTitle;
+            document.getElementById('theme-desc').innerText = data.themeDesc;
+            document.getElementById('theme-btn').innerHTML = data.themeBtn;
+            
+            document.getElementById('history-title').innerText = data.historyTitle;
+            document.getElementById('history-desc').innerText = data.historyDesc;
+            document.getElementById('history-btn').innerHTML = data.historyBtn;
+            
+            document.getElementById('sound-title').innerText = data.soundTitle;
+            document.getElementById('sound-desc').innerText = data.soundDesc;
+            document.getElementById('sound-btn').innerHTML = data.soundBtn;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>

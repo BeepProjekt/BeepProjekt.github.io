@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | راهنمای مدیریت تاریخچه و رکوردها</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="settings_hub.html" id="nav-hub" class="text-green-400 font-bold transition-colors lang-link">هاب تنظیمات</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <div class="mb-8">
+            <a href="settings_hub.html" id="back-link" class="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-green-400 transition-colors lang-link">
+                <span>←</span> بازگشت به هاب تنظیمات
+            </a>
+        </div>
+
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">Performance Logs</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">راهنمای جامع مدیریت تاریخچه و رکوردها 📊</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                ردپای تمرینات، زمان‌بندی رفلکس‌ها و جزییات کالیبراسیون‌های گذشته خودت رو آنالیز، فیلتر یا بهینه‌سازی کن.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+            
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 justify-center items-center">
+                <div class="max-w-[220px] rounded-2xl border border-slate-800 bg-slate-950 p-1.5 shadow-xl">
+                    <img src="../assets/images/Screenshot_20260622_192341.jpg" alt="History List View" class="rounded-xl w-full">
+                </div>
+                <div class="max-w-[220px] rounded-2xl border border-slate-800 bg-slate-950 p-1.5 shadow-xl">
+                    <img src="../assets/images/Screenshot_20260622_192403.jpg" alt="History Selection View" class="rounded-xl w-full">
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
+                        <span class="text-green-500 font-bold font-en">01/</span>
+                        <h2 id="sec1-title" class="text-lg font-bold text-white">کالیبرهای ذخیره شده (Session Information)</h2>
+                    </div>
+                    <p id="sec1-desc" class="text-slate-400 text-xs leading-relaxed">
+                        هر تمرینی که در اپلیکیشن بیپ به پایان می‌رسونی، با جزییات فنی کاملاً متفاوتی در این بخش لاگ میشه تا بتونی روند پیشرفت خودت رو به دقت ارزیابی کنی:
+                    </p>
+                    <div class="space-y-3 text-xs">
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-white font-en block mb-1">🏃‍♂️ Agility Drill</span>
+                            <p id="log-agility" class="text-slate-400">ثبت تمرینات چابکی شامل تعداد دستورات صادر شده (Commands)، فواصل زمانی بین بوق‌ها (Interval) و جهت‌های حرکتی تعیین شده (مانند شمال، جنوب، پایین) همراه با زمان دقیق کالیبر.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-white font-en block mb-1">🧠 Mental Drill</span>
+                            <p id="log-mental" class="text-slate-400">ثبت چالش‌های ذهنی و محاسباتی؛ نمایش تعداد سوالات پاسخ داده شده، بازه زمان‌بندی پاسخ‌دهی و سطح دشواری تعداد ارقام محاسبات (Difficulty).</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-white font-en block mb-1">⚡ Reaction</span>
+                            <p id="log-reaction" class="text-slate-400">مهم‌ترین فاکتور ارزیابی رفلکس؛ ثبت دقیق زمان عکس‌العمل شما بر حسب میلی‌ثانیه (ms). هر چقدر این عدد پایین‌تر باشه، سرعت واکنش سیستم عصبی شما بالاتر رفته.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-white font-en block mb-1">🔊 Beep Session</span>
+                            <p id="log-beep" class="text-slate-400">جلسات استاندارد شنیداری؛ ثبت تعداد بوق‌های نواخته شده در طول تمرین و بازه تاخیر فرکانس‌ها به ثانیه.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
+                        <span class="text-green-500 font-bold font-en">02/</span>
+                        <h2 id="sec2-title" class="text-lg font-bold text-white">مدیریت هوشمند و فیلترینگ رکوردها</h2>
+                    </div>
+                    <p id="sec2-desc" class="text-slate-400 text-xs leading-relaxed">
+                        برای پاکسازی یا بایگانی لاگ‌های تمرینی، ابزارهای کنترلی ویژه‌ای در نوار ابزار بالایی (Top Bar) تعبیه شده است:
+                    </p>
+                    <ul class="space-y-2.5 text-xs text-slate-400 pl-4 list-disc marker:text-green-500">
+                        <li id="li-select-mode"><strong class="text-white font-en">حالت انتخاب چندگانه (Multi-Select):</strong> با کلیک روی آیکون شبکه‌ای سمت راست بالاتصویر، چک‌باکس‌ها در کنار هر لاگ ظاهر میشن. این حالت بهت اجازه میده بدون اتلاف وقت، چندین جلسه تمرینی خاص رو به طور همزمان انتخاب و سازماندهی کنی.</li>
+                        <li id="li-single-delete"><strong class="text-white font-en">حذف سریع تکی:</strong> آیکون سطل زباله در سمت راست هر رکورد، به شما امکان میده یک کالیبر ضعیف یا اشتباه رو فوراً و بدون نیاز به ورود به منوهای پیچیده حذف کنید.</li>
+                        <li id="li-clear-all"><strong class="text-white font-en">پاکسازی کلی (Clear All History):</strong> آیکون سطل زباله در نوار اصلی بالا، هاب تاریخچه رو به صورت کامل تخلیه می‌کنه تا فضا برای کالیبراسیون‌ها و رکوردهای جدیدِ فصلِ تمرینیِ آینده باز بشه.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | راهنمای ظاهر و تم‌ها', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navHub: 'هاب تنظیمات', backLink: '← بازگشت به هاب تنظیمات',
+                pageTitle: 'راهنمای جامع مدیریت تاریخچه و رکوردها 📊',
+                pageDesc: 'ردپای تمرینات، زمان‌بندی رفلکس‌ها و جزییات کالیبراسیون‌های گذشته خودت رو آنالیز، فیلتر یا بهینه‌سازی کن.',
+                sec1Title: 'کالیبرهای ذخیره شده (Session Information)',
+                sec1Desc: 'هر تمرینی که در اپلیکیشن بیپ به پایان می‌رسونی، با جزییات فنی کاملاً متفاوتی در این بخش لاگ میشه تا بتونی روند پیشرفت خودت رو به دقت ارزیابی کنی:',
+                logAgility: 'ثبت تمرینات چابکی شامل تعداد دستورات صادر شده (Commands)، فواصل زمانی بین بوق‌ها (Interval) و جهت‌های حرکتی تعیین شده (مانند شمال، جنوب، پایین) همراه با زمان دقیق کالیبر.',
+                logMental: 'ثبت چالش‌های ذهنی و محاسباتی؛ نمایش تعداد سوالات پاسخ داده شده، بازه زمان‌بندی پاسخ‌دهی و سطح دشواری تعداد ارقام محاسبات (Difficulty).',
+                logReaction: 'مهم‌ترین فاکتور ارزیابی رفلکس؛ ثبت دقیق زمان عکس‌العمل شما بر حسب میلی‌ثانیه (ms). هر چقدر این عدد پایین‌تر باشه، سرعت واکنش سیستم عصبی شما بالاتر رفته.',
+                logBeep: 'جلسات استاندارد شنیداری؛ ثبت تعداد بوق‌های نواخته شده در طول تمرین و بازه تاخیر فرکانس‌ها به ثانیه.',
+                sec2Title: 'مدیریت هوشمند و فیلترینگ رکوردها',
+                sec2Desc: 'برای پاکسازی یا بایگانی لاگ‌های تمرینی، ابزارهای کنترلی ویژه‌ای در نوار ابزار بالایی (Top Bar) تعبیه شده است:',
+                liSelectMode: '<strong class="text-white font-en">حالت انتخاب چندگانه (Multi-Select):</strong> با کلیک روی آیکون شبکه‌ای سمت راست بالا، چک‌باکس‌ها در کنار هر لاگ ظاهر میشن. این حالت بهت اجازه میده بدون اتلاف وقت، چندین جلسه تمرینی خاص رو به طور همزمان انتخاب و سازماندهی کنی.',
+                liSingleDelete: '<strong class="text-white font-en">حذف سریع تکی:</strong> آیکون سطل زباله در سمت راست هر رکورد، به شما امکان میده یک کالیبر ضعیف یا اشتباه رو فوراً و بدون نیاز به ورود به منوهای پیچیده حذف کنید.',
+                liClearAll: '<strong class="text-white font-en">پاکسازی کلی (Clear All History):</strong> آیکون سطل زباله در نوار اصلی بالا، هاب تاریخچه رو به صورت کامل تخلیه می‌کنه تا فضا برای کالیبراسیون‌ها و رکوردهای جدیدِ فصلِ تمرینیِ آینده باز بشه.',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Performance Logs', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navHub: 'Settings Hub', backLink: '➔ Back to Settings Hub',
+                pageTitle: 'Comprehensive Performance Logs & History 📊',
+                pageDesc: 'Track, isolate, and audit your kinetic history metrics, reactive timestamps, and modular calibration traces over past cycles.',
+                sec1Title: 'Logged Session Profiles',
+                sec1Desc: 'Every routine completed inside the Beep terminal writes specialized contextual data to your storage layer for strict metric validation:',
+                logAgility: 'Captures kinetic maneuvering configurations including raw command counts, inter-beeping durations, and structural orientation vectors (N, S, DOWN) indexed against exact timestamps.',
+                logMental: 'Caches analytical cognitive loads, preserving accurate parameters for processed query structures, execution delay intervals, and algorithmic digit complexities.',
+                logReaction: 'The fundamental neuro-kinetic assessment. Logs sensory latency down to the millisecond (ms). Lower integers indicate peak physical reaction speeds and advanced motor response adaptations.',
+                logBeep: 'Standard sound-burst sessions. Retains total frequency triggers played during execution blocks alongside systemic interval constraints.',
+                sec2Title: 'Advanced Data Management Matrix',
+                sec2Desc: 'High-level utility switches positioned along the top system header let you modify and filter the database layout efficiently:',
+                liSelectMode: '<strong class="text-white font-en">Batch Multi-Select Array:</strong> Engaging the grid icon instantly renders checkbox toggles next to each index slot. Built for fast cleanups, it lets you isolate and modify multiple target sessions without cycling submenus.',
+                liSingleDelete: '<strong class="text-white font-en">Isolated Index Deletion:</strong> Clicking the trash bin assigned to any localized telemetry block immediately drops that specific performance row from storage.',
+                liClearAll: '<strong class="text-white font-en">Global Wipe (Clear All History):</strong> Executing the main trash trigger completely purges the local database cache, clearing workspace environments for fresh training cycles.',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-hub').innerText = data.navHub;
+            document.getElementById('back-link').innerHTML = data.backLink;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            document.getElementById('sec1-title').innerText = data.sec1Title;
+            document.getElementById('sec1-desc').innerText = data.sec1Desc;
+            
+            document.getElementById('log-agility').innerText = data.logAgility;
+            document.getElementById('log-mental').innerText = data.logMental;
+            document.getElementById('log-reaction').innerText = data.logReaction;
+            document.getElementById('log-beep').innerText = data.logBeep;
+            
+            document.getElementById('sec2-title').innerText = data.sec2Title;
+            document.getElementById('sec2-desc').innerText = data.sec2Desc;
+            document.getElementById('li-select-mode').innerHTML = data.liSelectMode;
+            document.getElementById('li-single-delete').innerHTML = data.liSingleDelete;
+            document.getElementById('li-clear-all').innerHTML = data.liClearAll;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>

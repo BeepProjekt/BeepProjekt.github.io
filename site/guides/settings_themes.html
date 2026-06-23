@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | راهنمای ظاهر و تم‌ها</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="settings_hub.html" id="nav-hub" class="text-green-400 font-bold transition-colors lang-link">هاب تنظیمات</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <div class="mb-8">
+            <a href="settings_hub.html" id="back-link" class="inline-flex items-center gap-2 text-xs text-slate-500 hover:text-green-400 transition-colors lang-link">
+                <span>←</span> بازگشت به هاب تنظیمات
+            </a>
+        </div>
+
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">Interface Customization</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">راهنمای پیکربندی ظاهر و تم‌ها 🎨</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                محیط بصری بیپ رو مطابق با شرایط نوری تمرین، استایل شخصی و سلیقه تاکتیکالت بازطراحی کن.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+            
+            <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                <div class="max-w-[260px] rounded-2xl border border-slate-800 bg-slate-950 p-1.5 shadow-xl">
+                    <img src="../assets/images/Screenshot_20260622_184435.jpeg" alt="Appearance & Themes Screen" class="rounded-xl w-full">
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
+                        <span class="text-green-500 font-bold font-en">01/</span>
+                        <h2 id="sec1-title" class="text-lg font-bold text-white">حالت پوسته اصلی (Theme Mode)</h2>
+                    </div>
+                    <p id="sec1-desc" class="text-slate-400 text-xs leading-relaxed">
+                        این بخش ساختار و بیس گرافیکی اپلیکیشن رو کالیبره می‌کنه و شامل سه گزینه کلیدیه:
+                    </p>
+                    <ul class="space-y-2.5 text-xs text-slate-400 pl-4 list-disc marker:text-green-500">
+                        <li id="li-sys"><strong class="text-white font-en">System Default:</strong> هماهنگی هوشمند و خودکار پوسته برنامه با تم جاری سیستم‌عامل گوشی.</li>
+                        <li id="li-light"><strong class="text-white font-en">Light Mode:</strong> رابط کاربری روشن با کنتراست بالا جهت خوانایی کامل زیر نور مستقیم خورشید یا فضاهای باز.</li>
+                        <li id="li-dark"><strong class="text-white font-en">Dark Mode:</strong> پوسته تاریک بهینه برای کاهش خستگی چشم و صرفه‌جویی در مصرف باتری در کالیبرهای شبانه.</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
+                        <span class="text-green-500 font-bold font-en">02/</span>
+                        <h2 id="sec2-title" class="text-lg font-bold text-white">تم‌های تاکتیکال (Tactical Themes)</h2>
+                    </div>
+                    <p id="sec2-desc" class="text-slate-400 text-xs leading-relaxed">
+                        برای فرار از پوسته‌های دارک معمولی، ۵ کالیبراسیون رنگی اختصاصی برای شرایط مختلف پیاده‌سازی شده:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-white font-en block mb-1">🥷 Stealth</span>
+                            <p id="t-stealth" class="text-slate-400">حالت مخفی‌کاری تمام مشکی و بدون انعکاس نور برای حفظ فوکوس مطلق در تاریکی غلیظ شب.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-amber-600 font-en block mb-1">🏜️ Desert</span>
+                            <p id="t-desert" class="text-slate-400">طیف رنگی خاک کالیبره شده با الهام از تجهیزات تاکتیکال مناطق بیابانی و خشک.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-slate-400 font-en block mb-1">🏙️ Urban</span>
+                            <p id="t-urban" class="text-slate-400">گاموت خاکستری متالیک هماهنگ با بتن‌های شهری و سالن‌های مدرن سرپوشیده.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg">
+                            <span class="font-bold text-yellow-400 font-en block mb-1">⚠️ High-Vis</span>
+                            <p id="t-highvis" class="text-slate-400">سیستم رنگی با بازتاب فرکانسی بالا برای به حداکثر رساندن سرعت رفلکس چشمی.</p>
+                        </div>
+                        <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-lg sm:col-span-2">
+                            <span class="font-bold text-green-400 font-en block mb-1">🧪 Cyber</span>
+                            <p id="t-cyber" class="text-slate-400">تم سایبرپانک نئونی (ماتریس سبز و مشکی) جهت تزریق بالاترین حد آدرنالین به سیستم عصبی.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 border-b border-slate-900 pb-2">
+                        <span class="text-green-500 font-bold font-en">03/</span>
+                        <h2 id="sec3-title" class="text-lg font-bold text-white">رنگ شاخص المان‌ها (Accent Color)</h2>
+                    </div>
+                    <p id="sec3-desc" class="text-slate-400 text-xs leading-relaxed">
+                        بخش پالت رنگی پایین صفحه بهت اجازه میده «امضای فرکانسی و بومی» اپلیکیشن رو شخصی‌سازی کنی. با تغییر این بخش، رنگ دکمه‌های عملیاتی (مثل START)، اسلایدرها، شمارنده‌ها و نقاط کلیدی فوکوس بلافاصله دگرگون میشن:
+                    </p>
+                    <ul class="space-y-2.5 text-xs text-slate-400 pl-4 list-disc marker:text-green-500">
+                        <li id="li-dynamic"><strong class="text-white font-en">رنگ داینامیک (آیکون پالت 🎨):</strong> با فعال‌سازی این گزینه (اولین دایره از سمت چپ)، اپلیکیشن از موتور هوشمند <span class="text-white font-bold">Material You</span> استفاده می‌کنه تا رنگ شاخص برنامه رو دقیقاً بر اساس والپیپر و تم رنگی جاری سیستم‌عامل گوشی شما هماهنگ و ست کنه.</li>
+                        <li id="li-static-colors"><strong class="text-white font-en">رنگ‌های ثابت استاتیک:</strong> شامل طیف وسیعی از رنگ‌های نئونی کالیبره شده (سبز، قرمز، آبی، زرد، نارنجی و بنفش). شما می‌تونی بر اساس روانشناسی رنگ‌ها یا نیاز تمرینی، رنگی رو انتخاب کنی که بیشترین تحریک چشمی و رفلکس ذهنی رو برات ایجاد می‌کنه.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | راهنمای ظاهر و تم‌ها', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navHub: 'هاب تنظیمات', backLink: '← بازگشت به هاب تنظیمات',
+                pageTitle: 'راهنمای پیکربندی ظاهر و تم‌ها 🎨',
+                pageDesc: 'محیط بصری بیپ رو مطابق با شرایط نوری تمرین، استایل شخصی و سلیقه تاکتیکالت بازطراحی کن.',
+                sec1Title: 'حالت پوسته اصلی (Theme Mode)',
+                sec1Desc: 'این بخش ساختار و بیس گرافیکی اپلیکیشن رو کالیبره می‌کنه و شامل سه گزینه کلیدیه:',
+                liSys: '<strong class="text-white font-en">System Default:</strong> هماهنگی هوشمند و خودکار پوسته برنامه با تم جاری سیستم‌عامل گوشی.',
+                liLight: '<strong class="text-white font-en">Light Mode:</strong> رابط کاربری روشن با کنتراست بالا جهت خوانایی کامل زیر نور مستقیم خورشید یا فضاهای باز.',
+                liDark: '<strong class="text-white font-en">Dark Mode:</strong> پوسته تاریک بهینه برای کاهش خستگی چشم و صرفه‌جویی در مصرف باتری در کالیبرهای شبانه.',
+                sec2Title: 'تم‌های تاکتیکال (Tactical Themes)',
+                sec2Desc: 'برای فرار از پوسته‌های معمولی، ۵ کالیبراسیون رنگی اختصاصی برای شرایط مختلف پیاده‌سازی شده:',
+                tStealth: 'حالت مخفی‌کاری تمام مشکی و بدون انعکاس نور برای حفظ فوکوس مطلق در تاریکی غلیظ شب.',
+                tDesert: 'طیف رنگی خاک کالیبره شده با الهام از تجهیزات تاکتیکال مناطق بیابانی و خشک.',
+                tUrban: 'تم خاکستری متالیک هماهنگ با بتن‌های شهری و سالن‌های مدرن سرپوشیده.',
+                tHighvis: 'سیستم رنگی با بازتاب فرکانسی بالا برای به حداکثر رساندن سرعت رفلکس چشمی.',
+                tCyber: 'تم سایبرپانک نئونی (ماتریس سبز و مشکی) جهت تزریق بالاترین حد آدرنالین به سیستم عصبی.',
+                sec3Title: 'رنگ شاخص المان‌ها (Accent Color)',
+                sec3Desc: 'بخش پالت رنگی پایین صفحه بهت اجازه میده «امضای فرکانسی و بومی» اپلیکیشن رو شخصی‌سازی کنی. با تغییر این بخش، رنگ دکمه‌های عملیاتی (مثل START)، اسلایدرها، شمارنده‌ها و نقاط کلیدی فوکوس بلافاصله دگرگون میشن:',
+                liDynamic: '<strong class="text-white font-en">رنگ داینامیک (آیکون پالت 🎨):</strong> با فعال‌سازی این گزینه (اولین دایره از سمت چپ)، اپلیکیشن از موتور هوشمند <span class="text-white font-bold">Material You</span> استفاده می‌کنه تا رنگ شاخص برنامه رو دقیقاً بر اساس والپیپر و تم رنگی جاری سیستم‌عامل گوشی شما هماهنگ و ست کنه.',
+                liStaticColors: '<strong class="text-white font-en">رنگ‌های ثابت استاتیک:</strong> شامل طیف وسیعی از رنگ‌های نئونی کالیبره شده (سبز، قرمز، آبی، زرد، نارنجی و بنفش). شما می‌تونی بر اساس روانشناسی رنگ‌ها یا نیاز تمرینی، رنگی رو انتخاب کنی که بیشترین تحریک چشمی و رفلکس ذهنی رو برات ایجاد می‌کنه.',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Themes Setup', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navHub: 'Settings Hub', backLink: '➔ Back to Settings Hub',
+                pageTitle: 'Appearance & Tactical Themes 🎨',
+                pageDesc: 'Re-engineer Beep’s visual core to map perfectly against your ambient lighting matrix, operational loadout, and private aesthetics.',
+                sec1Title: 'Theme Mode Master Framework',
+                sec1Desc: 'Calibrates the underlying canvas structural density. Offers three unified toggle states:',
+                liSys: '<strong class="text-white font-en">System Default:</strong> Dynamically inherits active global dark/light values from your device operating system.',
+                liLight: '<strong class="text-white font-en">Light Mode:</strong> High-luminance UI execution to bypass display glare under direct sunlight or open-field missions.',
+                liDark: '<strong class="text-white font-en">Dark Mode:</strong> Deep low-emission layout built to minimize ocular strain and reserve system battery cells during night operations.',
+                sec2Title: 'Tactical Theme Arrays',
+                sec2Desc: 'Specialized color profiles calibrated for advanced spatial conditions, far beyond stock viewports:',
+                tStealth: 'Absolute zero-reflectance layout. Strips down luminescence to lock down absolute mental clarity in pitch-black environments.',
+                tDesert: 'Subdued arid soil colorways styled after military field gear layouts.',
+                tUrban: 'Anodized steel-gray gradients built to mirror tactical indoor facilities and modern urban spaces.',
+                tHighvis: 'Hyper-contrasted chromatic signals optimized to isolate and train extreme visual reaction velocities.',
+                tCyber: 'A high-energy neon-green matrix profile designed to flood the neural system with absolute processing focus.',
+                sec3Title: 'Accent Injection Core (Accent Color)',
+                sec3Desc: 'The bottom interaction palette controls Beep\'s local operational signature. Toggling this configuration immediately binds structural hot points—such as the START trigger, slider interfaces, and feedback text nodes—to tactical hues:',
+                liDynamic: '<strong class="text-white font-en">Dynamic Color (Palette Icon 🎨):</strong> Selecting the initial circle activates the <span class="text-white font-bold">Material You</span> telemetry engine. It automatically extracts dominant and neutral color profiles from your mobile device\'s wallpaper, locking Beep\'s layout into a completely native system integration.',
+                liStaticColors: '<strong class="text-white font-en">Static Neon Profiles:</strong> Features high-fidelity frequency slots including matrix green, hazardous red, depth blue, vivid yellow, high-vis orange, and deep synth purple. Perfect for choosing targeted hues based on situational reflex triggers and psychological focus demands.',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-hub').innerText = data.navHub;
+            document.getElementById('back-link').innerHTML = data.backLink;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            document.getElementById('sec1-title').innerText = data.sec1Title;
+            document.getElementById('sec1-desc').innerText = data.sec1Desc;
+            
+            document.getElementById('li-sys').innerHTML = data.liSys;
+            document.getElementById('li-light').innerHTML = data.liLight;
+            document.getElementById('li-dark').innerHTML = data.liDark;
+            
+            document.getElementById('sec2-title').innerText = data.sec2Title;
+            document.getElementById('sec2-desc').innerText = data.sec2Desc;
+            document.getElementById('t-stealth').innerText = data.tStealth;
+            document.getElementById('t-desert').innerText = data.tDesert;
+            document.getElementById('t-urban').innerText = data.tUrban;
+            document.getElementById('t-highvis').innerText = data.tHighvis;
+            document.getElementById('t-cyber').innerText = data.tCyber;
+            
+            document.getElementById('sec3-title').innerText = data.sec3Title;
+            document.getElementById('sec3-desc').innerText = data.sec3Desc;
+            document.getElementById('li-dynamic').innerHTML = data.liDynamic;
+            document.getElementById('li-static-colors').innerHTML = data.liStaticColors;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>
