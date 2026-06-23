@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | تایمر صوتی</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="../index.html#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <!-- PAGE HEADER -->
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">Feature Guide #01</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">تایمر صوتی (بوق) 🔊</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                با ریتم‌های تکراری و تایمرهای معمولی خداحافظی کن! اینجا یاد می‌گیری چطور با فواصل صوتی کاملاً تصادفی و غیرقابل‌بینی، سرعت واکنش و هوشیاری مغزت رو به بالاترین سطح ممکن برسونی.
+            </p>
+        </div>
+
+        <!-- APP STEP SECTION -->
+        <div class="space-y-20">
+
+            <!-- STEP 1: CONFIGURATION -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-12">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_145753.jpeg" alt="Beep Configuration" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">01</span>
+                        <h2 id="step1-title" class="text-xl font-bold text-white">پیکربندی بازه عدم قطعیت (Interval Range)</h2>
+                    </div>
+                    <p id="step1-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        مغز انسان استادِ عادت کردن به الگوهای تکراریه؛ اگه بین بوق‌ها یک ثانیه ثابت زمان باشه، بدن بعد از چند بار حرکت، اون رو پیش‌بینی می‌کنه و عملاً تمرین چابکی بی‌اثر میشه. در این بخش با استفاده از یک اسلایدر دو زبانه (Range Slider) بسیار روان، یک «بازه زمانی» مشخص می‌کنی. برای مثال، وقتی بازه رو روی ۵ تا ۱۱ ثانیه تنظیم می‌کنی، الگوریتم داخلی بیپ دست به کار میشه و بین هر بوق، یک زمان کاملاً تصادفی انتخاب می‌کنه تا غافلگیری به حداکثر برسه!
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <ul class="space-y-3 text-xs text-slate-400">
+                            <li><strong id="step1-li1-bold" class="text-slate-200">شمارنده لایو (Beeps):</strong> این بخش تعداد دفعاتی که بوق در سشن فعلی شلیک شده رو دقیقاً ثبت می‌کنه تا حساب رکوردهات از دستت در نره (در ابتدا روی 0 تنظیم شده).</li>
+                            <li><strong id="step1-li2-bold" class="text-slate-200">شخصی‌سازی محدوده:</strong> هر چقدر فاصله بین حداقل و حداکثر زمان بیشتر باشه، غیرقابل‌پیش‌بینی بودن تمرین سخت‌تر و جذاب‌تر میشه!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2: RUNNING & RANDOMIZATION -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60">
+                <div class="lg:col-span-5 flex justify-center lg:order-last">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_145859.jpeg" alt="Beep Running" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">02</span>
+                        <h2 id="step2-title" class="text-xl font-bold text-white">شروع چالش و شلیک سیگنال صوتی (GO)</h2>
+                    </div>
+                    <p id="step2-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        وقتی دکمه START رو لمس می‌کنی، فرآیند لایو شروع میشه. دایره مرکزی بلافاصله تغییر وضعیت میده، به رنگ آجری/قهوه‌ای متمایل میشه و عبارت مهیج <span class="text-white font-bold font-en">GO!</span> رو به نمایش می‌ذاره. حالا کلید کار دست موتور زمان‌بندی بیپه؛ شمارنده بوق‌ها در لحظه به‌روزرسانی میشه و به محض اینکه به تیکِ رندوم بعدی برسه، افکت صوتی انتخابی تو رو در فضا منفجر می‌کنه!
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <blockquote id="step2-note" class="text-xs text-green-500/90 italic leading-relaxed">
+                            ⚡ قانون تمرین واکنش: چشمهات رو ببند یا تمرکزت رو بذار روی حرکت؛ به محض اینکه صدای بوق رو شنیدی، باید سریع‌ترین عکس‌العمل ممکنی که در توان داری رو نشون بدی. این یعنی ساختنِ اتوبان‌های عصبی جدید در مغز برای واکنش‌های فوق‌سریع!
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3: PAUSE & STATE MANAGEMENT -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-12">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_150020.jpeg" alt="Beep Paused" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">03</span>
+                        <h2 id="step3-title" class="text-xl font-bold text-white">کنترل کامل روی سشن، استراحت و بازنشانی</h2>
+                    </div>
+                    <p id="step3-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        وسط تمرین خسته شدی یا نیاز به نفس‌گیری داری؟ اصلاً نگران نباش! با زدن دکمه STOP، تایمر بی‌درنگ در همان صدم ثانیه‌ای که هست فریز میشه و فرآیند بوق زدن متوقف می‌شه. در این حالت، کنترل پنل هوشمند بیپ دو تا دکمه کاربردی رو برات رو می‌کنه تا بتونی استیت‌ها و وضعیت تمرینت رو به بهترین شکل مدیریت کنی.
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <ul class="space-y-3 text-xs text-slate-400">
+                            <li><strong id="step3-li1-bold" class="text-slate-200">گزینه RESUME (ادامه):</strong> سشن تمرینی تو رو دقیقاً از همون نقطه‌ای که متوقف کردی (با حفظ تعداد بوق‌های شلیک‌شده و زمان باقی‌مانده) از سر می‌گیره تا زنجیره تمرینت خراب نشه.</li>
+                            <li><strong id="step3-li2-bold" class="text-slate-200">گزینه RESET (بازنشانی):</strong> همه چیز رو پاک می‌کنه! شمارنده بوق‌ها دوباره صفر میشه و دایره به حالت آماده‌باش اولیه برمی‌گرده تا بتونی یه رکوردگیری کاملاً جدید رو شروع کنی.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+	<p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>	
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | تایمر صوتی', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navDownload: 'دانلود',
+                pageTitle: 'تایمر صوتی (بوق) 🔊',
+                pageDesc: 'با ریتم‌های تکراری و تایمرهای معمولی خداحافظی کن! اینجا یاد می‌گیری چطور با فواصل صوتی کاملاً تصادفی و غیرقابل‌بینی، سرعت واکنش و هوشیاری مغزت رو به بالاترین سطح ممکن برسونی.',
+                step1Title: 'پیکربندی بازه عدم قطعیت (Interval Range)',
+                step1Desc: 'مغز انسان استادِ عادت کردن به الگوهای تکراریه؛ اگه بین بوق‌ها یک ثانیه ثابت زمان باشه، بدن بعد از چند بار حرکت، اون رو پیش‌بینی می‌کنه و عملاً تمرین چابکی بی‌اثر میشه. در این بخش با استفاده از یک اسلایدر دو زبانه (Range Slider) بسیار روان، یک «بازه زمانی» مشخص می‌کنی. برای مثال، وقتی بازه رو روی ۵ تا ۱۱ ثانیه تنظیم می‌کنی، الگوریتم داخلی بیپ دست به کار میشه و بین هر بوق، یک زمان کاملاً تصادفی انتخاب می‌کنه تا غافلگیری به حداکثر برسه!',
+                step1Li1Bold: 'شمارنده لایو (Beeps):', step1Li1Text: ' این بخش تعداد دفعاتی که بوق در سشن فعلی شلیک شده رو دقیقاً ثبت می‌کنه تا حساب رکوردهات از دستت در نره (در ابتدا روی 0 تنظیم شده).',
+                step1Li2Bold: 'شخصی‌سازی محدوده:', step1Li2Text: ' هر چقدر فاصله بین حداقل و حداکثر زمان بیشتر باشه، غیرقابل‌پیش‌بینی بودن تمرین سخت‌تر و جذاب‌تر میشه!',
+                step2Title: 'شروع چالش و شلیک سیگنال صوتی (GO)',
+                step2Desc: 'وقتی دکمه START رو لمس می‌کنی، فرآیند لایو شروع میشه. از این لحظه، موتور زمان‌بندی بیپ فعال شده و گوش‌به‌زنگ می‌مونه. دایره مرکزی در حالت آماده‌باش باقی می‌مونه و دقیقاً هر بار که بوقِ رندوم پخش میشه، دایره به رنگِ تمِ انتخابی تو درمیاد تا علاوه بر صدای بوق، یک نشانه بصری آنی هم داشته باشی و واکنشت رو با بالاترین دقت ثبت کنی!',
+		step2Note: '⚡ قانون تمرین واکنش: چشمهات رو ببند یا تمرکزت رو بذار روی حرکت؛ به محض اینکه صدای بوق رو شنیدی، باید سریع‌ترین عکس‌العمل ممکنی که در توان داری رو نشون بدی. این یعنی ساختنِ اتوبان‌های عصبی جدید در مغز برای واکنش‌های فوق‌سریع!',
+                step3Title: 'کنترل کامل روی سشن، استراحت و بازنشانی',
+                step3Desc: 'وسط تمرین خسته شدی یا نیاز به نفس‌گیری داری؟ اصلاً نگران نباش! با زدن دکمه STOP، تایمر بی‌درنگ در همان صدم ثانیه‌ای که هست فریز میشه و فرآیند بوق زدن متوقف می‌شه. در این حالت، کنترل پنل هوشمند بیپ دو تا دکمه کاربردی رو برات رو می‌کنه تا بتونی استیت‌ها و وضعیت تمرینت رو به بهترین شکل مدیریت کنی.',
+                step3Li1Bold: 'گزینه RESUME (ادامه):', step3Li1Text: ' سشن تمرینی تو رو دقیقاً از همون نقطه‌ای که متوقف کردی (با حفظ تعداد بوق‌های شلیک‌شده و زمان باقی‌مانده) از سر می‌گیره تا زنجیره تمرینت خراب نشه.',
+                step3Li2Bold: 'گزینه RESET (بازنشانی):', step3Li2Text: ' همه چیز رو پاک می‌کنه! شمارنده بوق‌ها دوباره صفر میشه و دایره به حالت آماده‌باش اولیه برمی‌گرده تا بتونی یه رکوردگیری کاملاً جدید رو شروع کنی.',
+		footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Audio Beep Timer', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navDownload: 'Download',
+                pageTitle: 'Audio Beep Timer 🔊',
+                pageDesc: 'Say goodbye to predictive metronomes and basic timers! Learn how to utilize fully randomized acoustic sequences to shatter your cognitive latency and unlock elite neuromuscular response speeds.',
+                step1Title: 'Configuring the Chaos Window (Interval Range)',
+                step1Desc: 'The human brain is hardwired to seek predictive patterns; if a timer triggers at a fixed interval, your body builds an anticipatory rhythm, severely degrading the true cognitive reflex output of agility training. By sliding the highly responsive dual-thumb Range Slider, you establish a dynamic uncertainty zone. For instance, fixing boundaries between 5 and 11 seconds forces the Beep background algorithm to recalculate an absolute random mathematical point for every single trigger, maximizing the elements of pure surprise!',
+                step1Li1Bold: 'Live Register Counter (Beeps):', step1Li1Text: ' Keeps strict real-time telemetry of total audio signals successfully fired in the active loop, ensuring your performance benchmarks are tracked flawlessly (starts at 0).',
+                step1Li2Bold: 'Delta Boundaries Customization:', step1Li2Text: ' Increasing the spread between minimum and maximum values amplifies the overall training complexity and cognitive load.',
+                step2Title: 'Session Initialization & Active Signaling (GO)',
+                step2Desc: 'Engaging the START trigger fires up the internal high-priority clock loop. The system stays vigilant, and the central circle acts as a live visual indicator—flashing in the color of your selected theme exactly when each randomized audio trigger fires. This dual-sensory approach (audio + visual) ensures your reaction drills are synchronized for maximum peak performance!',
+		step2Note: '⚡ Reflex Drill Core: Close your eyes or focus strictly on your positioning; the split second your ears register the alert frequency, execute your designated movement or tactical response. This builds highly reinforced neural pathways for hyper-accelerated real-world reactions!',
+                step3Title: 'State Persistence, Suspension & Refresh Controls',
+                step3Desc: 'Need a quick breather or adjusting your workout gear? Don\'t sweat it. Striking the STOP trigger instantly Freezes the internal ticker right at its current microsecond cluster and halts the signal sequence. The Beep state manager seamlessly exposes dual operational choices allowing you to govern your session parameters exactly how you see fit.',
+                step3Li1Bold: 'RESUME Modifier Option:', step3Li1Text: ' Spins the loop execution blocks right back into action from the precise split-second they were suspended, protecting your current streak score and time metrics.',
+                step3Li2Bold: 'RESET Purge Option:', step3Li2Text: ' Flushes all volatile state registers back to default! The beep counters drop back to zero and the view re-arms itself for a pristine new recording benchmark trial.',
+            	footerText: '© 2026 Just a normal person away from society ❤️'
+	    }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            
+            document.getElementById('step1-title').innerText = data.step1Title;
+            document.getElementById('step1-desc').innerText = data.step1Desc;
+            document.getElementById('step1-li1-bold').innerText = data.step1Li1Bold;
+            document.getElementById('step1-li1-bold').nextSibling.textContent = data.step1Li1Text;
+            document.getElementById('step1-li2-bold').innerText = data.step1Li2Bold;
+            document.getElementById('step1-li2-bold').nextSibling.textContent = data.step1Li2Text;
+            
+            document.getElementById('step2-title').innerText = data.step2Title;
+            document.getElementById('step2-desc').innerHTML = data.step2Desc;
+            document.getElementById('step2-note').innerText = data.step2Note;
+            
+            document.getElementById('step3-title').innerText = data.step3Title;
+            document.getElementById('step3-desc').innerText = data.step3Desc;
+            document.getElementById('step3-li1-bold').innerText = data.step3Li1Bold;
+            document.getElementById('step3-li1-bold').nextSibling.textContent = data.step3Li1Text;
+            document.getElementById('step3-li2-bold').innerText = data.step3Li2Bold;
+            document.getElementById('step3-li2-bold').nextSibling.textContent = data.step3Li2Text;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>

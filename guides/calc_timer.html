@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="html-tag" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیپ | چالش محاسبات ذهنی</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #05080E; }
+        .font-fa { font-family: 'Vazirmatn', sans-serif; }
+        .font-en { font-family: 'JetBrains Mono', monospace; }
+        .neon-text { text-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+    </style>
+</head>
+<body class="text-slate-300 antialiased font-fa selection:bg-green-500 selection:text-black">
+
+    <header class="sticky top-0 z-50 border-b border-green-950/40 bg-[#05080E]/80 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="text-xl font-black text-white tracking-wider neon-text font-en lang-link">BEEP<span class="text-green-500">.</span></a>
+                </div>
+                
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="../index.html" id="nav-home" class="hover:text-green-500 transition-colors lang-link">صفحه اصلی</a>
+                    <a href="../guides.html" id="nav-guides" class="hover:text-green-500 transition-colors lang-link">راهنماها</a>
+                    <a href="../index.html#download-zone" id="nav-download" class="hover:text-green-500 transition-colors lang-link">دانلود</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <button id="lang-btn" onclick="toggleLanguage()" class="rounded border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs font-bold text-green-400 hover:border-green-500 transition-all font-en cursor-pointer">
+                        EN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold tracking-widest text-green-500 uppercase font-en">Feature Guide #03</span>
+            <h1 id="page-title" class="mt-2 text-3xl font-black text-white sm:text-4xl">دریل محاسبات ریاضی (Dual-Task Training) 🧠</h1>
+            <p id="page-desc" class="mt-4 text-base text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                تمرین همزمان عصب و عضله؛ ظرفیت پردازش مغزت رو تحت فشار شدید فیزیکی به چالش بکش و یاد بگیر که چطور در اوج حرکت و خستگی، سریع و بی‌نقص تصمیم‌گیری کنی!
+            </p>
+        </div>
+
+        <div class="mb-20 rounded-2xl border border-green-950/40 bg-gradient-to-b from-green-950/10 to-transparent p-6 sm:p-8">
+            <h3 id="concept-title" class="text-lg font-black text-white mb-3">💡 فلسفه تمرینات دوگانه (Dual-Tasking) چیه؟</h3>
+            <p id="concept-desc" class="text-sm text-slate-400 leading-relaxed mb-4">
+                توی مسابقات ورزشی، مبارزات رزمی یا موقعیت‌های پرفشارِ گیمینگ، شما هیچ‌وقت ثابت یک‌جا نمی‌شینید که فقط فکر کنید. مغز شما باید همزمان که تعادل بدن، جابجایی پاها و حرکات تکنیکی رو مدیریت می‌کنه، سریع‌ترین استراتژی‌ها و محاسبات رو هم انجام بده. این بخش از اپلیکیشن بیپ دقیقاً برای همین ساخته شده؛ ایجاد یک **بار شناختی مصنوعی (Cognitive Load)** در حین تمرین فیزیکی.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-xs">
+                <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-900">
+                    <strong id="concept-box1-title" class="text-green-400 block mb-1">🤼 ترکیب حرکتی پیشنهادی:</strong>
+                    <p id="concept-box1-desc" class="text-slate-400 leading-relaxed">این دریل رو با حرکاتی مثل طناب‌زدن، شدوباکسینگ (سایه‌زنی)، پلانک پویا، یا گام‌برداری رزمی ترکیب کن. همزمان که بدنت در حال حرکته، چشمت به صفحه است تا به محض تغییر فواصل، محاسبات رو انجام بدی و پاسخ رو توی ذهنت بگی.</p>
+                </div>
+                <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-900">
+                    <strong id="concept-box2-title" class="text-green-400 block mb-1">🎯 هدف نهایی تمرین:</strong>
+                    <p id="concept-box2-desc" class="text-slate-400 leading-relaxed">جداسازی کانون تمرکز! با این روش، سیستم عصبی تو عادت می‌کنه که در شرایط خستگی مفرط یا ترشح آدرنالین، دچار کوری محیطی یا قفل‌شدگی ذهنی نشه و کانال‌های پردازش داده رو باز نگه داره.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-24">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_161446.jpeg" alt="Math Drill Configuration" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">01</span>
+                        <h2 id="step1-title" class="text-xl font-bold text-white">تنظیم دستی درجه سختی و فواصل پاسخ‌دهی</h2>
+                    </div>
+                    <p id="step1-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        شروع چالش کاملاً در کنترل توست. در این بخش، اپلیکیشن به صورت خودکار سختی رو بالا نمی‌بره، بلکه این خودت هستی که بر اساس سطح آمادگی ذهنت، میدان بازی رو می‌چینی. با دو اسلایدر نئونی می‌تونی پارامترهای زیر رو شخصی‌سازی کنی:
+                    </p>
+                    <div class="bg-slate-950 border border-slate-900 rounded-lg p-4">
+                        <ul class="space-y-3 text-xs text-slate-400">
+                            <li><strong id="step1-li1-bold" class="text-slate-200">سختی بر اساس ارقام (Difficulty - Digits):</strong> با این اسلایدر مشخص می‌کنی که اعداد تولید شده چند رقمی باشن (تک‌رقمی ساده، دورقمی، یا چندرقمی‌های چالش‌برانگیز برای نوابغ!).</li>
+                            <li><strong id="step1-li2-bold" class="text-slate-200">بازه زمانی پاسخ (Answer Interval):</strong> بازه زمانی مجاز برای تغییر سوالات رو تعیین می‌کنی (مثلاً بین ۱ تا ۱۰ ثانیه) تا ریتم ناگهانی چالش حفظ بشه.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16 lg:flex-row-reverse">
+                <div class="lg:col-span-5 flex justify-center lg:order-last">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_161513.jpeg" alt="Drill Started" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">02</span>
+                        <h2 id="step2-title" class="text-xl font-bold text-white">شروع دریل و مواجهه با اولین چالش دیداری</h2>
+                    </div>
+                    <p id="step2-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        به محض فشردن دکمه <span class="text-white font-bold font-en">START DRILL</span>، موتور محاسباتی بیپ فعال میشه. شمارنده سوالات از صفر شروع شده و اولین مسئله تصادفی روی پس‌زمینه تیره صفحه نقش می‌بنده (مثل <span class="text-white font-bold font-en">14 - 23</span>). حالا زمان بر علیه توست! باید همزمان با حفظ ریتم حرکت بدنت، پاسخ رو در سریع‌ترین زمان ممکن در مغزت فرموله‌سازی کنی.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-slate-900/60 pb-16">
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_161556.jpeg" alt="Live Math Drill Questions" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">03</span>
+                        <h2 id="step3-title" class="text-xl font-bold text-white">افزایش پویای سوالات و تغییر عملیات‌ها</h2>
+                    </div>
+                    <p id="step3-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        با گذشت زمان و طبق بازه تصادفی که تعریف کردی، سوالات تغییر می‌کشن. سیستم انواع عملیات‌های اصلی (جمع، تفریق، ضرب و تقسیم) رو بر اساس تعداد ارقامی که در ابتدا تعیین کردی بهت نمایش میده. برای مثال، مواجهه با یک تقسیم چندرقمی مثل <span class="text-green-400 font-bold font-en">2 ÷ 7626</span> دقیقاً همان نقطه‌ای است که تمرکزت رو به اوج می‌رسونه تا پاسخ یعنی <span class="text-green-400 font-bold font-en">3813</span> رو پیدا کنی. دکمه STOP در هر لحظه آماده است تا جریان چالش رو متوقف کنه.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-12 lg:flex-row-reverse">
+                <div class="lg:col-span-5 flex justify-center lg:order-last">
+                    <div class="max-w-[250px] rounded-xl border border-slate-800 bg-slate-950 p-1 shadow-md">
+                        <img src="../assets/images/Screenshot_20260622_161618.jpeg" alt="Sustained Training Flow" class="rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded bg-green-500/10 text-xs font-bold text-green-400 font-en">04</span>
+                        <h2 id="step4-title" class="text-xl font-bold text-white">تداوم دریل و امکان کنترل جریان تمرین</h2>
+                    </div>
+                    <p id="step4-desc" class="text-slate-400 text-sm leading-relaxed mb-4">
+                        هرچه جلوتر می‌ری، شمارنده بالای صفحه تعداد کل سوالات رد شده رو ثبت می‌کنه (مثلاً <span class="text-green-400 font-bold font-en">Questions: 9</span>). اگر در حین طناب‌زدن یا تمرین فیزیکی نیاز به استراحت داشتی یا خواستی ریتمت رو بازسازی کنی، کلیدهای کنترل پایینی به کمکت میان؛ می‌تونی با زدن <span class="text-green-400 font-bold font-en">RESUME</span> تمرین رو ادامه بدی یا با فشردن <span class="text-red-400 font-bold font-en">RESET</span> کل سشن رو صفر کنی و با یک تنظیمات جدید از نو شروع کنی!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="py-6 border-t border-slate-900 text-center text-[11px] text-slate-600 bg-[#03060A]">
+        <p id="footer-text">© 2026 Just a normal person away from society ❤️</p>
+    </footer>
+
+    <script>
+        let currentLang = 'fa';
+        const contentData = {
+            fa: {
+                title: 'بیپ | چالش محاسبات ذهنی', dir: 'rtl', bodyClass: 'font-fa', removeBodyClass: 'font-en', langBtn: 'EN',
+                navHome: 'صفحه اصلی', navGuides: 'راهنماها', navDownload: 'دانلود',
+                pageTitle: 'دریل محاسبات ریاضی (Dual-Task Training) 🧠',
+                pageDesc: 'تمرین همزمان عصب و عضله؛ ظرفیت پردازش مغزت رو تحت فشار شدید فیزیکی به چالش بکش و یاد بگیر که چطور در اوج حرکت و خستگی، سریع و بی‌نقص تصمیم‌گیری کنی!',
+                conceptTitle: '💡 فلسفه تمرینات دوگانه (Dual-Tasking) چیه؟',
+                conceptDesc: 'توی مسابقات ورزشی، مبارزات رزمی یا موقعیت‌های پرفشارِ گیمینگ، شما هیچ‌وقت ثابت یک‌جا نمی‌شینید که فقط فکر کنید. مغز شما باید همزمان که تعادل بدن، جابجایی پاها و حرکات تکنیکی رو مدیریت می‌کنه، سریع‌ترین استراتژی‌ها و محاسبات رو هم انجام بده. این بخش از اپلیکیشن بیپ دقیقاً برای همین ساخته شده؛ ایجاد یک بار شناختی مصنوعی (Cognitive Load) در حین تمرین فیزیکی.',
+                conceptBox1Title: '🤼 ترکیب حرکتی پیشنهادی:',
+                conceptBox1Desc: 'این دریل رو با حرکاتی مثل طناب‌زدن، شدوباکسینگ (سایه‌زنی)، پلانک پویا، یا گام‌برداری رزمی ترکیب کن. همزمان که بدنت در حال حرکته، چشمت به صفحه است تا به محض تغییر فواصل، محاسبات رو انجام بدی و پاسخ رو توی ذهنت بگی.',
+                conceptBox2Title: '🎯 هدف نهایی تمرین:',
+                conceptBox2Desc: 'جداسازی کانون تمرکز! با این روش، سیستم عصبی تو عادت می‌کنه که در شرایط خستگی مفرط یا ترشح آدرنالین، دچار کوری محیطی یا قفل‌شدگی ذهنی نشه و کانال‌های پردازش داده رو باز نگه داره.',
+                step1Title: 'تنظیم دستی درجه سختی و فواصل پاسخ‌دهی',
+                step1Desc: 'شروع چالش کاملاً در کنترل توست. در این بخش، اپلیکیشن به صورت خودکار سختی رو بالا نمی‌بره، بلکه این خودت هستی که بر اساس سطح آمادگی ذهنت، میدان بازی رو می‌چینی. با دو اسلایدر نئونی می‌تونی پارامترهای زیر رو شخصی‌سازی کنی:',
+                step1Li1Bold: 'سختی بر اساس ارقام (Difficulty - Digits):', step1Li1Text: ' با این اسلایدر مشخص می‌کنی که اعداد تولید شده چند رقمی باشن (تک‌رقمی ساده، دورقمی، یا چندرقمی‌های چالش‌برانگیز برای نوابغ!).',
+                step1Li2Bold: 'بازه زمانی پاسخ (Answer Interval):', step1Li2Text: ' بازه زمانی مجاز برای تغییر سوالات رو تعیین می‌کنی (مثلاً بین ۱ تا ۱۰ ثانیه) تا ریتم ناگهانی چالش حفظ بشه.',
+                step2Title: 'شروع دریل و مواجهه با اولین چالش دیداری',
+                step2Desc: 'به محض فشردن دکمه START DRILL، موتور محاسباتی بیپ فعال میشه. شمارنده سوالات از صفر شروع شده و اولین مسئله تصادفی روی پس‌زمینه تیره صفحه نقش می‌بنده (مثل 14 - 23). حالا زمان بر علیه توست! باید همزمان با حفظ ریتم حرکت بدنت، پاسخ رو در سریع‌ترین زمان ممکن در مغزت فرموله‌سازی کنی.',
+                step3Title: 'افزایش پویای سوالات و تغییر عملیات‌ها',
+                step3Desc: 'با گذشت زمان و طبق بازه تصادفی که تعریف کردی، سوالات تغییر می‌کشن. سیستم انواع عملیات‌های اصلی (جمع، تفریق، ضرب و تقسیم) رو بر اساس تعداد ارقامی که در ابتدا تعیین کردی بهت نمایش میده. برای مثال، مواجهه با یک تقسیم چندرقمی مثل 2 ÷ 7626 دقیقاً همان نقطه‌ای است که تمرکزت رو به اوج می‌رسونه تا پاسخ یعنی 3813 رو پیدا کنی. دکمه STOP در هر لحظه آماده است تا جریان چالش رو متوقف کنه.',
+                step4Title: 'تداوم دریل و امکان کنترل جریان تمرین',
+                step4Desc: 'هرچه جلوتر می‌ری، شمارنده بالای صفحه تعداد کل سوالات رد شده رو ثبت می‌کنه (مثلاً Questions: 9). اگر در حین طناب‌زدن یا تمرین فیزیکی نیاز به استراحت داشتی یا خواستی ریتمت رو بازسازی کنی، کلیدهای کنترل پایینی به کمکت میان؛ می‌تونی با زدن RESUME تمرین رو ادامه بدی یا با فشردن RESET کل سشن رو صفر کنی و با یک تنظیمات جدید از نو شروع کنی!',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            },
+            en: {
+                title: 'Beep | Mental Math Drill', dir: 'ltr', bodyClass: 'font-en', removeBodyClass: 'font-fa', langBtn: 'FA',
+                navHome: 'Home', navGuides: 'Guides', navDownload: 'Download',
+                pageTitle: 'Math Calculation Drill (Dual-Task Training) 🧠',
+                pageDesc: 'Neuromuscular integration at its finest. Challenge your brain\'s bandwidth under heavy physical duress and unlock swift decision-making pipelines!',
+                conceptTitle: '💡 What is Dual-Task Training Philosophy?',
+                conceptDesc: 'During high-stakes matches, martial combats, or intense gaming situations, you never stand still just to process thoughts. Your brain must seamlessly control body balance, complex footwork, and kinetic techniques while concurrently running top-speed strategic calculations. This section of Beep creates an artificial Cognitive Load right inside your physical workout.',
+                conceptBox1Title: '🤼 Suggested Mechanical Sync:',
+                conceptBox1Desc: 'Combine this drill with continuous movements like jump roping, shadowboxing, dynamic planks, or martial arts movement steps. As your anatomy flows, keep your gaze fixed on the screen, solving the equations instantly in your mind as intervals tick.',
+                conceptBox2Title: '🎯 Core Training Objective:',
+                conceptBox2Desc: 'Isolating focal channels! This specific conditioning ensures your central nervous system prevents tunnel vision or cognitive locking when adrenaline levels spike under extreme exhaustion.',
+                step1Title: 'Manual Configuration of Thresholds & Digital Ranges',
+                step1Desc: 'The threshold configuration is entirely under your command. The application does not auto-scale difficulty over loops; instead, you structure the battlefield based on your present cognitive stamina. Adjust parameters manually using two custom neon sliders:',
+                step1Li1Bold: 'Difficulty (Digits):', step1Li1Text: ' Set the raw numeric length generated per interval (simple single digits, dual-digit loops, or multi-digit challenges for pure genius profiles).',
+                step1Li2Bold: 'Answer Interval Bounds:', step1Li2Text: ' Adjust the timing thresholds for questions to refresh (e.g., 1 to 10 seconds) to maintain a sudden reactive pace.',
+                step2Title: 'Drill Initialization & Primary Visual Stimulus',
+                step2Desc: 'Hitting the START DRILL button fires up the Beep background mathematical array. The problem index clears from zero and the initial randomized arithmetic formula hits the dark viewport layout (e.g., 23 - 14). Time is now ticking against you; formulate the resolution while keeping your physical pacing intact.',
+                step3Title: 'Dynamic Iteration Handling & Diverse Math Operations',
+                step3Desc: 'As time vectors pass within your preconfigured random interval bounds, equations recycle. The engine randomly delivers core mathematical categories (Addition, Subtraction, Multiplication, Division) adhering to your digit limit constraints. Confronting an advanced equation like 7626 ÷ 2 tests your active cognitive limits to extract 3813 before the sweep. Hit STOP anytime to halt the live execution loop.',
+                step4Title: 'Iterative Session Logging & Runtime Flow Control',
+                step4Desc: 'As you progress deeper, the top layout index updates tracking values for all successfully evaluated iterations (e.g., Questions: 9). If you need a quick breathing gap during jump ropes, tactile buttons have you covered—press RESUME to continue the calculation flow or fire RESET to purge volatile cache values and re-configure variables.',
+                footerText: '© 2026 Just a normal person away from society ❤️'
+            }
+        };
+
+        function updateUI(lang) {
+            const data = contentData[lang];
+            document.title = data.title;
+            
+            const htmlTag = document.getElementById('html-tag');
+            htmlTag.setAttribute('lang', lang);
+            htmlTag.setAttribute('dir', data.dir);
+            document.body.classList.remove(data.removeBodyClass);
+            document.body.classList.add(data.bodyClass);
+            
+            document.getElementById('lang-btn').innerText = data.langBtn;
+            document.getElementById('nav-home').innerText = data.navHome;
+            document.getElementById('nav-guides').innerText = data.navGuides;
+            document.getElementById('nav-download').innerText = data.navDownload;
+            
+            document.getElementById('page-title').innerText = data.pageTitle;
+            document.getElementById('page-desc').innerText = data.pageDesc;
+            
+            document.getElementById('concept-title').innerText = data.conceptTitle;
+            document.getElementById('concept-desc').innerText = data.conceptDesc;
+            document.getElementById('concept-box1-title').innerText = data.conceptBox1Title;
+            document.getElementById('concept-box1-desc').innerText = data.conceptBox1Desc;
+            document.getElementById('concept-box2-title').innerText = data.conceptBox2Title;
+            document.getElementById('concept-box2-desc').innerText = data.conceptBox2Desc;
+            
+            document.getElementById('step1-title').innerText = data.step1Title;
+            document.getElementById('step1-desc').innerText = data.step1Desc;
+            document.getElementById('step1-li1-bold').innerText = data.step1Li1Bold;
+            document.getElementById('step1-li1-bold').nextSibling.textContent = data.step1Li1Text;
+            document.getElementById('step1-li2-bold').innerText = data.step1Li2Bold;
+            document.getElementById('step1-li2-bold').nextSibling.textContent = data.step1Li2Text;
+            
+            document.getElementById('step2-title').innerText = data.step2Title;
+            document.getElementById('step2-desc').innerHTML = data.step2Desc;
+            
+            document.getElementById('step3-title').innerText = data.step3Title;
+            document.getElementById('step3-desc').innerHTML = data.step3Desc;
+            
+            document.getElementById('step4-title').innerText = data.step4Title;
+            document.getElementById('step4-desc').innerHTML = data.step4Desc;
+            
+            document.getElementById('footer-text').innerText = data.footerText;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                let originalHref = link.getAttribute('href');
+                let cleanPath = originalHref.split('?')[0].split('#')[0];
+                let hash = originalHref.includes('#') ? '#' + originalHref.split('#')[1] : '';
+                
+                if (cleanPath === '../index.html') {
+                    link.href = `../index.html?lang=${lang}${hash}`;
+                } else if (cleanPath === '../guides.html') {
+                    link.href = `../guides.html?lang=${lang}${hash}`;
+                } else {
+                    link.href = `${cleanPath}?lang=${lang}${hash}`;
+                }
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fa' ? 'en' : 'fa';
+            const newUrl = window.location.pathname + `?lang=${currentLang}` + window.location.hash;
+            window.history.pushState({ path: newUrl }, '', newUrl);
+            updateUI(currentLang);
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        currentLang = urlParams.get('lang') || 'fa';
+        updateUI(currentLang);
+    </script>
+</body>
+</html>
